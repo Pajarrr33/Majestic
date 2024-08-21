@@ -9,7 +9,7 @@ class Checkout extends CI_Controller {
 		$this->load->library('cart');
 		$this->load->model('Majesticmodels');
 		$this->controller = 'Checkout';
-		$params = array('server_key' => 'SB-Mid-server-ZG5brjgGry67Qujos8h0io2J', 'production' => false);
+		$params = array('server_key' => '', 'production' => false);
 		$this->load->library('midtrans');
 		$this->midtrans->config($params);
 	}
@@ -35,7 +35,7 @@ class Checkout extends CI_Controller {
 		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		CURLOPT_CUSTOMREQUEST => "GET",
 		CURLOPT_HTTPHEADER => array(
-			"key: af7af86a41e30c52f0dad6a8a058a955"
+			"key: "
 		),
 		));
 
@@ -188,7 +188,7 @@ class Checkout extends CI_Controller {
 		CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 		CURLOPT_CUSTOMREQUEST => "GET",
 		CURLOPT_HTTPHEADER => array(
-			"key: af7af86a41e30c52f0dad6a8a058a955",
+			"key: ",
 		),
 		));
 
@@ -229,7 +229,7 @@ class Checkout extends CI_Controller {
 		CURLOPT_POSTFIELDS => "origin=501&destination=$id_distrik&weight=$weight&courier=".$courier,
 		CURLOPT_HTTPHEADER => array(
 			"content-type: application/x-www-form-urlencoded",
-			"key: af7af86a41e30c52f0dad6a8a058a955"
+			"key: "
 		),
 		));
 
